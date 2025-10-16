@@ -241,8 +241,8 @@ public class VehiculosController : ControllerBase
                     o.Estado.NombreEstServ != EstadoOrden.Completada.ToString() &&
                     o.Estado.NombreEstServ != EstadoOrden.Cancelada.ToString());
 
-            if (hasActiveOrders)
-                return BadRequest("No se puede eliminar el vehículo porque tiene órdenes de servicio activas");
+            if (hasActiveOrders) 
+                return BadRequest("No  se puede eliminar el vehículo porque tiene órdenes de servicio activas");
 
             _unitOfWork.Vehiculos.Delete(vehiculo);
             await _unitOfWork.SaveChangesAsync(ct);

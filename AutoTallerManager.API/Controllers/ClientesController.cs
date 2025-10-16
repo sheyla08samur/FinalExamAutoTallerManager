@@ -43,6 +43,8 @@ public class ClientesController : ControllerBase
                 take: pageSize,
                 ct: ct);
 
+                
+
             var totalCount = await _unitOfWork.Clientes.CountAsync(
                 filter: c => string.IsNullOrEmpty(searchTerm) ||
                         (!string.IsNullOrEmpty(c.NombreCompleto) && c.NombreCompleto.Contains(searchTerm)) ||
