@@ -10,6 +10,9 @@ using AutoTallerManager.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+
+
+
 namespace AutoTallerManager.API.Controllers
 {/*
     [ApiController]
@@ -196,4 +199,4 @@ namespace AutoTallerManager.API.Controllers
             public string? NewPassword { get; set; }
         }   
     */
-    } 
+} 
